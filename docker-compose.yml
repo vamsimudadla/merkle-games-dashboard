@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
+    container_name: gamedb-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=gamedb_pass
+      - POSTGRES_DB=gamedb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gamedb-app
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=gamedb
+      - DB_USER=postgres
+      - DB_PASSWORD=gamedb_pass
+      - PORT=8000
+      - JWT_SECRET=your-secret-key-here-change-in-production
+      - API_VERSION=v1
+      - API_PREFIX=/api
+      - GRAPHQL_PATH=/graphql
+      - GRAPHQL_PLAYGROUND=true
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./src:/app/src
+      - ./migrations:/app/migrations
+      - ./seeders:/app/seeders
+
+volumes:
+  postgres_data:

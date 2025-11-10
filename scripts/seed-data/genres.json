@@ -1,0 +1,19 @@
+{
+  "genres": [
+    { "id": 1, "genreName": "Action" },
+    { "id": 2, "genreName": "Adventure" },
+    { "id": 3, "genreName": "RPG" },
+    { "id": 4, "genreName": "Strategy" },
+    { "id": 5, "genreName": "Simulation" },
+    { "id": 6, "genreName": "Sports" },
+    { "id": 7, "genreName": "Racing" },
+    { "id": 8, "genreName": "Puzzle" },
+    { "id": 9, "genreName": "Fighting" },
+    { "id": 10, "genreName": "Horror" },
+    { "id": 11, "genreName": "Shooter" },
+    { "id": 12, "genreName": "Platformer" },
+    { "id": 13, "genreName": "Survival" },
+    { "id": 14, "genreName": "Battle Royale" },
+    { "id": 15, "genreName": "MMORPG" }
+  ]
+}

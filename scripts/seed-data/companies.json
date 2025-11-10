@@ -1,0 +1,704 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Electronic Arts",
+      "country": "United States",
+      "foundedYear": 1982,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 2,
+      "name": "Activision Blizzard",
+      "country": "United States",
+      "foundedYear": 1979,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 3,
+      "name": "Nintendo",
+      "country": "Japan",
+      "foundedYear": 1889,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 4,
+      "name": "Sony Interactive Entertainment",
+      "country": "Japan",
+      "foundedYear": 1993,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 5,
+      "name": "Microsoft Studios",
+      "country": "United States",
+      "foundedYear": 2000,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 6,
+      "name": "Ubisoft",
+      "country": "France",
+      "foundedYear": 1986,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 7,
+      "name": "Take-Two Interactive",
+      "country": "United States",
+      "foundedYear": 1993,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 8,
+      "name": "Square Enix",
+      "country": "Japan",
+      "foundedYear": 2003,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 9,
+      "name": "Bandai Namco Entertainment",
+      "country": "Japan",
+      "foundedYear": 2006,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 10,
+      "name": "Capcom",
+      "country": "Japan",
+      "foundedYear": 1983,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 11,
+      "name": "SEGA",
+      "country": "Japan",
+      "foundedYear": 1960,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 12,
+      "name": "2K Games",
+      "country": "United States",
+      "foundedYear": 2005,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 13,
+      "name": "Bethesda Softworks",
+      "country": "United States",
+      "foundedYear": 1986,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 14,
+      "name": "Warner Bros. Games",
+      "country": "United States",
+      "foundedYear": 2004,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 15,
+      "name": "Koch Media",
+      "country": "Germany",
+      "foundedYear": 1994,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 16,
+      "name": "Focus Entertainment",
+      "country": "France",
+      "foundedYear": 1996,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 17,
+      "name": "Paradox Interactive",
+      "country": "Sweden",
+      "foundedYear": 1999,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 18,
+      "name": "Devolver Digital",
+      "country": "United States",
+      "foundedYear": 2009,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 19,
+      "name": "CD Projekt",
+      "country": "Poland",
+      "foundedYear": 1994,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 20,
+      "name": "Team17",
+      "country": "United Kingdom",
+      "foundedYear": 1990,
+      "companyType": "Publisher"
+    },
+    {
+      "id": 21,
+      "name": "Naughty Dog",
+      "country": "United States",
+      "foundedYear": 1984,
+      "companyType": "Developer"
+    },
+    {
+      "id": 22,
+      "name": "Rockstar Games",
+      "country": "United States",
+      "foundedYear": 1998,
+      "companyType": "Developer"
+    },
+    {
+      "id": 23,
+      "name": "Valve Corporation",
+      "country": "United States",
+      "foundedYear": 1996,
+      "companyType": "Developer"
+    },
+    {
+      "id": 24,
+      "name": "Epic Games",
+      "country": "United States",
+      "foundedYear": 1991,
+      "companyType": "Developer"
+    },
+    {
+      "id": 25,
+      "name": "BioWare",
+      "country": "Canada",
+      "foundedYear": 1995,
+      "companyType": "Developer"
+    },
+    {
+      "id": 26,
+      "name": "Bungie",
+      "country": "United States",
+      "foundedYear": 1991,
+      "companyType": "Developer"
+    },
+    {
+      "id": 27,
+      "name": "Insomniac Games",
+      "country": "United States",
+      "foundedYear": 1994,
+      "companyType": "Developer"
+    },
+    {
+      "id": 28,
+      "name": "Santa Monica Studio",
+      "country": "United States",
+      "foundedYear": 1999,
+      "companyType": "Developer"
+    },
+    {
+      "id": 29,
+      "name": "Game Freak",
+      "country": "Japan",
+      "foundedYear": 1989,
+      "companyType": "Developer"
+    },
+    {
+      "id": 30,
+      "name": "FromSoftware",
+      "country": "Japan",
+      "foundedYear": 1986,
+      "companyType": "Developer"
+    },
+    {
+      "id": 31,
+      "name": "Platinum Games",
+      "country": "Japan",
+      "foundedYear": 2007,
+      "companyType": "Developer"
+    },
+    {
+      "id": 32,
+      "name": "Arc System Works",
+      "country": "Japan",
+      "foundedYear": 1988,
+      "companyType": "Developer"
+    },
+    {
+      "id": 33,
+      "name": "Kojima Productions",
+      "country": "Japan",
+      "foundedYear": 2015,
+      "companyType": "Developer"
+    },
+    {
+      "id": 34,
+      "name": "Atlus",
+      "country": "Japan",
+      "foundedYear": 1986,
+      "companyType": "Developer"
+    },
+    {
+      "id": 35,
+      "name": "Level-5",
+      "country": "Japan",
+      "foundedYear": 1998,
+      "companyType": "Developer"
+    },
+    {
+      "id": 36,
+      "name": "CyberConnect2",
+      "country": "Japan",
+      "foundedYear": 1996,
+      "companyType": "Developer"
+    },
+    {
+      "id": 37,
+      "name": "Polyphony Digital",
+      "country": "Japan",
+      "foundedYear": 1998,
+      "companyType": "Developer"
+    },
+    {
+      "id": 38,
+      "name": "Team Ninja",
+      "country": "Japan",
+      "foundedYear": 1995,
+      "companyType": "Developer"
+    },
+    {
+      "id": 39,
+      "name": "Guerrilla Games",
+      "country": "Netherlands",
+      "foundedYear": 2000,
+      "companyType": "Developer"
+    },
+    {
+      "id": 40,
+      "name": "Remedy Entertainment",
+      "country": "Finland",
+      "foundedYear": 1995,
+      "companyType": "Developer"
+    },
+    {
+      "id": 41,
+      "name": "IO Interactive",
+      "country": "Denmark",
+      "foundedYear": 1998,
+      "companyType": "Developer"
+    },
+    {
+      "id": 42,
+      "name": "DICE",
+      "country": "Sweden",
+      "foundedYear": 1992,
+      "companyType": "Developer"
+    },
+    {
+      "id": 43,
+      "name": "Machine Games",
+      "country": "Sweden",
+      "foundedYear": 2009,
+      "companyType": "Developer"
+    },
+    {
+      "id": 44,
+      "name": "Mojang Studios",
+      "country": "Sweden",
+      "foundedYear": 2009,
+      "companyType": "Developer"
+    },
+    {
+      "id": 45,
+      "name": "Avalanche Studios",
+      "country": "Sweden",
+      "foundedYear": 2003,
+      "companyType": "Developer"
+    },
+    {
+      "id": 46,
+      "name": "Coffee Stain Studios",
+      "country": "Sweden",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 47,
+      "name": "Paradox Development Studio",
+      "country": "Sweden",
+      "foundedYear": 1995,
+      "companyType": "Developer"
+    },
+    {
+      "id": 48,
+      "name": "CD Projekt RED",
+      "country": "Poland",
+      "foundedYear": 2002,
+      "companyType": "Developer"
+    },
+    {
+      "id": 49,
+      "name": "Techland",
+      "country": "Poland",
+      "foundedYear": 1991,
+      "companyType": "Developer"
+    },
+    {
+      "id": 50,
+      "name": "11 bit studios",
+      "country": "Poland",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 51,
+      "name": "Flying Wild Hog",
+      "country": "Poland",
+      "foundedYear": 2009,
+      "companyType": "Developer"
+    },
+    {
+      "id": 52,
+      "name": "The Farm 51",
+      "country": "Poland",
+      "foundedYear": 2005,
+      "companyType": "Developer"
+    },
+    {
+      "id": 53,
+      "name": "Dontnod Entertainment",
+      "country": "France",
+      "foundedYear": 2008,
+      "companyType": "Developer"
+    },
+    {
+      "id": 54,
+      "name": "Arkane Studios",
+      "country": "France",
+      "foundedYear": 1999,
+      "companyType": "Developer"
+    },
+    {
+      "id": 55,
+      "name": "Quantic Dream",
+      "country": "France",
+      "foundedYear": 1997,
+      "companyType": "Developer"
+    },
+    {
+      "id": 56,
+      "name": "Asobo Studio",
+      "country": "France",
+      "foundedYear": 2002,
+      "companyType": "Developer"
+    },
+    {
+      "id": 57,
+      "name": "Spiders",
+      "country": "France",
+      "foundedYear": 2008,
+      "companyType": "Developer"
+    },
+    {
+      "id": 58,
+      "name": "Deck13 Interactive",
+      "country": "Germany",
+      "foundedYear": 2001,
+      "companyType": "Developer"
+    },
+    {
+      "id": 59,
+      "name": "Piranha Bytes",
+      "country": "Germany",
+      "foundedYear": 1997,
+      "companyType": "Developer"
+    },
+    {
+      "id": 60,
+      "name": "Crytek",
+      "country": "Germany",
+      "foundedYear": 1999,
+      "companyType": "Developer"
+    },
+    {
+      "id": 61,
+      "name": "Yager Development",
+      "country": "Germany",
+      "foundedYear": 1999,
+      "companyType": "Developer"
+    },
+    {
+      "id": 62,
+      "name": "Rocksteady Studios",
+      "country": "United Kingdom",
+      "foundedYear": 2004,
+      "companyType": "Developer"
+    },
+    {
+      "id": 63,
+      "name": "Creative Assembly",
+      "country": "United Kingdom",
+      "foundedYear": 1987,
+      "companyType": "Developer"
+    },
+    {
+      "id": 64,
+      "name": "Rare",
+      "country": "United Kingdom",
+      "foundedYear": 1985,
+      "companyType": "Developer"
+    },
+    {
+      "id": 65,
+      "name": "Media Molecule",
+      "country": "United Kingdom",
+      "foundedYear": 2006,
+      "companyType": "Developer"
+    },
+    {
+      "id": 66,
+      "name": "Playground Games",
+      "country": "United Kingdom",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 67,
+      "name": "Codemasters",
+      "country": "United Kingdom",
+      "foundedYear": 1986,
+      "companyType": "Developer"
+    },
+    {
+      "id": 68,
+      "name": "Supermassive Games",
+      "country": "United Kingdom",
+      "foundedYear": 2008,
+      "companyType": "Developer"
+    },
+    {
+      "id": 69,
+      "name": "Digital Extremes",
+      "country": "Canada",
+      "foundedYear": 1993,
+      "companyType": "Developer"
+    },
+    {
+      "id": 70,
+      "name": "Ubisoft Montreal",
+      "country": "Canada",
+      "foundedYear": 1997,
+      "companyType": "Developer"
+    },
+    {
+      "id": 71,
+      "name": "Red Barrels",
+      "country": "Canada",
+      "foundedYear": 2011,
+      "companyType": "Developer"
+    },
+    {
+      "id": 72,
+      "name": "Behaviour Interactive",
+      "country": "Canada",
+      "foundedYear": 1992,
+      "companyType": "Developer"
+    },
+    {
+      "id": 73,
+      "name": "Moon Studios",
+      "country": "Austria",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 74,
+      "name": "Larian Studios",
+      "country": "Belgium",
+      "foundedYear": 1996,
+      "companyType": "Developer"
+    },
+    {
+      "id": 75,
+      "name": "NCSoft",
+      "country": "South Korea",
+      "foundedYear": 1997,
+      "companyType": "Developer"
+    },
+    {
+      "id": 76,
+      "name": "Pearl Abyss",
+      "country": "South Korea",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 77,
+      "name": "Shift Up",
+      "country": "South Korea",
+      "foundedYear": 2013,
+      "companyType": "Developer"
+    },
+    {
+      "id": 78,
+      "name": "miHoYo",
+      "country": "China",
+      "foundedYear": 2012,
+      "companyType": "Developer"
+    },
+    {
+      "id": 79,
+      "name": "NetEase Games",
+      "country": "China",
+      "foundedYear": 1997,
+      "companyType": "Developer"
+    },
+    {
+      "id": 80,
+      "name": "Tencent Games",
+      "country": "China",
+      "foundedYear": 2003,
+      "companyType": "Developer"
+    },
+    {
+      "id": 81,
+      "name": "4A Games",
+      "country": "Ukraine",
+      "foundedYear": 2005,
+      "companyType": "Developer"
+    },
+    {
+      "id": 82,
+      "name": "GSC Game World",
+      "country": "Ukraine",
+      "foundedYear": 1995,
+      "companyType": "Developer"
+    },
+    {
+      "id": 83,
+      "name": "Obsidian Entertainment",
+      "country": "United States",
+      "foundedYear": 2003,
+      "companyType": "Developer"
+    },
+    {
+      "id": 84,
+      "name": "InXile Entertainment",
+      "country": "United States",
+      "foundedYear": 2002,
+      "companyType": "Developer"
+    },
+    {
+      "id": 85,
+      "name": "Double Fine Productions",
+      "country": "United States",
+      "foundedYear": 2000,
+      "companyType": "Developer"
+    },
+    {
+      "id": 86,
+      "name": "Respawn Entertainment",
+      "country": "United States",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 87,
+      "name": "343 Industries",
+      "country": "United States",
+      "foundedYear": 2007,
+      "companyType": "Developer"
+    },
+    {
+      "id": 88,
+      "name": "The Coalition",
+      "country": "Canada",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 89,
+      "name": "Turn 10 Studios",
+      "country": "United States",
+      "foundedYear": 2001,
+      "companyType": "Developer"
+    },
+    {
+      "id": 90,
+      "name": "Undead Labs",
+      "country": "United States",
+      "foundedYear": 2009,
+      "companyType": "Developer"
+    },
+    {
+      "id": 91,
+      "name": "Compulsion Games",
+      "country": "Canada",
+      "foundedYear": 2009,
+      "companyType": "Developer"
+    },
+    {
+      "id": 92,
+      "name": "Ninja Theory",
+      "country": "United Kingdom",
+      "foundedYear": 2000,
+      "companyType": "Developer"
+    },
+    {
+      "id": 93,
+      "name": "Thunder Lotus Games",
+      "country": "Canada",
+      "foundedYear": 2014,
+      "companyType": "Developer"
+    },
+    {
+      "id": 94,
+      "name": "Studio MDHR",
+      "country": "Canada",
+      "foundedYear": 2010,
+      "companyType": "Developer"
+    },
+    {
+      "id": 95,
+      "name": "Klei Entertainment",
+      "country": "Canada",
+      "foundedYear": 2005,
+      "companyType": "Developer"
+    },
+    {
+      "id": 96,
+      "name": "Facepunch Studios",
+      "country": "United Kingdom",
+      "foundedYear": 2004,
+      "companyType": "Developer"
+    },
+    {
+      "id": 97,
+      "name": "Re-Logic",
+      "country": "United States",
+      "foundedYear": 2011,
+      "companyType": "Developer"
+    },
+    {
+      "id": 98,
+      "name": "Unknown Worlds Entertainment",
+      "country": "United States",
+      "foundedYear": 2001,
+      "companyType": "Developer"
+    },
+    {
+      "id": 99,
+      "name": "Sucker Punch Productions",
+      "country": "United States",
+      "foundedYear": 1997,
+      "companyType": "Developer"
+    },
+    {
+      "id": 100,
+      "name": "Housemarque",
+      "country": "Finland",
+      "foundedYear": 1995,
+      "companyType": "Developer"
+    }
+  ]
+}

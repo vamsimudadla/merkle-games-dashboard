@@ -1,0 +1,7 @@
+FROM postgres:16-alpine
+
+ENV POSTGRES_USER=gamedb_user
+ENV POSTGRES_PASSWORD=gamedb_pass
+ENV POSTGRES_DB=gamedb
+
+EXPOSE 5432
