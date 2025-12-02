@@ -9,15 +9,17 @@ echo "PostgreSQL is ready!"
 echo "Running database migrations..."
 npx sequelize-cli db:migrate
 
-# Check if database is already seeded by checking if genres table has data
+# Check if database is already seeded by querying the genres table directly
 echo "Checking if database needs seeding..."
-GENRE_COUNT=$(npx sequelize-cli db:seed:status 2>/dev/null | grep -c "up" || echo "0")
 
-if [ "$GENRE_COUNT" = "0" ]; then
-  echo "Database is empty. Seeding with sample data..."
+# Use psql via environment variables to check if genres table has data
+GENRE_COUNT=$(PGPASSWORD=${DB_PASSWORD:-gamedb_pass} psql -h ${DB_HOST:-postgres} -U ${DB_USER:-postgres} -d ${DB_NAME:-gamedb} -t -c "SELECT COUNT(*) FROM genres;" 2>/dev/null | tr -d ' ' || echo "0")
+
+if [ "$GENRE_COUNT" = "0" ] || [ -z "$GENRE_COUNT" ]; then
+  echo "Database is empty (genre count: ${GENRE_COUNT:-0}). Seeding with sample data..."
   npx sequelize-cli db:seed:all
 else
-  echo "Database already has data. Skipping seed."
+  echo "Database already has data (${GENRE_COUNT} genres). Skipping seed."
 fi
 
 echo "Starting the application..."

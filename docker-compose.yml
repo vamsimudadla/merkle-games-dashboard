@@ -45,7 +45,6 @@ services:
         condition: service_healthy
     volumes:
       - ./src:/app/src
-      - ./migrations:/app/migrations
       - ./seeders:/app/seeders
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]

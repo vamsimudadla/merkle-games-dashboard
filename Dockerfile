@@ -1,6 +1,6 @@
 FROM node:24-alpine
 
-RUN apk add --no-cache netcat-openbsd curl
+RUN apk add --no-cache netcat-openbsd curl postgresql-client
 
 WORKDIR /app
 

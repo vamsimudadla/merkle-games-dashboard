@@ -22,7 +22,7 @@ module.exports = {
       },
       password: {
         type: Sequelize.STRING(255),
-        allowNull: false
+        allowNull: true
       },
       registration_date: {
         type: Sequelize.DATE,

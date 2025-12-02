@@ -180,7 +180,7 @@ module.exports = {
       console.log(`  - Games: ${games.length}`);
       console.log(`  - Reviews: ${reviews.length}`);
       console.log(`  - Images: ${images.length}`);
-      console.log(`  - Image Relations: ${imageRelations.length}`);
+      console.log(`  - Image Relations: ${validImageRelations.length}`);
 
     } catch (error) {
       console.error('❌ Seeding failed:', error);
