@@ -1,117 +1,24 @@
-# 🎮 Game DB API
+# Games DB
 
-Backend API for frontend technical assignments.
+Welcome to the games DB assignment. As this repo serves as a foundation for multiple frontend technical assignments, it includes a backend RESTful API, GraphQL, GraphQL Playground, database schema, and documentation to help you get started quickly.
 
-## 🚀 Quick Start
+## Getting Started
+
+### Prerequisites
+- Docker and Docker Compose installed on your machine. ([Docker Installation Guide](https://docs.docker.com/get-docker/)
+- Alternatively, Podman can be used as a drop-in replacement for Docker.
+
+### Running the Application
 
 ```bash
-# Clone and start
-git clone git@github.com:merkle-ne-tools/frontend-interview-games-api.git game-db
-cd game-db
-docker-compose up --build
+(cd server && docker-compose up --build)
 ```
 
-**API Endpoints:**
-- 🔗 **REST API**: `http://localhost:8000/api/v1`
-- ⚡ **GraphQL**: `http://localhost:8000/graphql`
-- 🛠️ **GraphQL Playground**: `http://localhost:8000/graphql-sandbox`
-- 📖 **Swagger Documentation**: `http://localhost:8000/api-docs`
+## Your assignment
 
-## 🎯 For Frontend Developers
+Create a client folder in the root of this repository and build a frontend application (using the framework your assignment require), using either REST or GraphQL to fetch and display data from the backend API. Your assignment will contain details on what to build and using which technologies.
 
-Build a frontend application (NextJS, NuxtJS, etc.) that connects to this API to display games, reviews, companies, and genres.
-
-**Available Data:**
-- 260+ games
-- 100 companies (developers/publishers)
-- 15 genres
-- 1200+ user reviews
-- 1000+ images
-
-**Documentation:**
-- REST API: Visit the [Swagger UI](http://localhost:8000/api-docs) for interactive documentation
-- GraphQL: Use the [GraphQL Playground](http://localhost:8000/graphql-sandbox) to explore the schema
-
-## 📋 Prerequisites
-
-- Docker and Docker Compose
-- That's it!
-
-## 🔌 Database Access (Optional)
-
-**Connection Details:**
-- Host: `localhost`
-- Port: `5432`
-- Database: `gamedb`
-- Username: `gamedb_user`
-- Password: `gamedb_pass`
-
-**Compatible Tools:** TablePlus, pgAdmin, DBeaver, Postico, DataGrip
-
-## 🐳 Docker Commands
-
+# Stopping the Application
 ```bash
-# Run in background
-docker-compose up -d
-
-# View logs
-docker-compose logs -f app
-
-# Stop
 docker-compose down
-
-# Full reset
-docker-compose down -v && docker-compose up --build
-```
-
----
-
-## 📚 Additional Information
-
-### Database Schema
-
-- `games` - Video game information
-- `companies` - Developers and publishers
-- `genres` - Game categories
-- `users` - User profiles
-- `user_reviews` - Ratings and reviews
-- `images` - Screenshots and covers
-- `image_relations` - Polymorphic image relationships
-
-### Local Development (Without Docker)
-
-```bash
-npm install
-cp .env.example .env
-npm run migrate
-npm run seed
-npm run dev
-```
-
-### Testing
-
-```bash
-npm test              # All tests
-npm run test:coverage # Coverage report
-npm run test:rest     # REST tests only
-npm run test:graphql  # GraphQL tests only
-```
-
-### Project Structure
-
-```
-game-db/
-├── src/
-│   ├── config/         # Database config
-│   ├── controllers/    # REST controllers
-│   ├── graphql/        # GraphQL schema
-│   ├── models/         # Sequelize models
-│   ├── routes/         # API routes
-│   └── index.js        # Entry point
-├── scripts/            # Seed generation
-├── seeders/            # Database seeders
-├── migrations/         # Migrations
-├── tests/              # Test suites
-├── public/             # GraphQL Playground
-└── docker-compose.yml  # Docker config
 ```
