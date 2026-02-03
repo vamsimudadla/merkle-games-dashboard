@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   development: {
     dialect: 'sqlite',
-    storage: process.env.DB_STORAGE || './data/gamedb.sqlite',
+    storage: process.env.DB_STORAGE || './data/gameapi.sqlite',
     logging: false
   },
   test: {
@@ -13,7 +13,7 @@ module.exports = {
   },
   production: {
     dialect: 'sqlite',
-    storage: process.env.DB_STORAGE || './data/gamedb.sqlite',
+    storage: process.env.DB_STORAGE || './data/gameapi.sqlite',
     logging: false
   }
 };

@@ -114,7 +114,7 @@ function generateUsers() {
     users.push({
       id: i,
       username: `${baseName}${i}`,
-      email: `${baseName.toLowerCase()}${i}@gamedb.com`,
+      email: `${baseName.toLowerCase()}${i}@gameapi.com`,
       registrationDate: registrationDate.toISOString().split('T')[0]
     });
   }

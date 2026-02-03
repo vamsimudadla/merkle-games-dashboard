@@ -6,9 +6,9 @@ Backend API for frontend technical assignments.
 
 ```bash
 # Clone and start
-git clone git@github.com:merkle-ne-tools/frontend-interview-games-api.git game-db
-cd game-db
-cp env.example .env   # Optional: customize environment variables
+git clone git@github.com:merkle-ne-tools/merkle-games-api.git game-api
+cd game-api/server
+cp .env.example .env   # Optional: customize environment variables
 docker-compose up --build
 ```
 
@@ -21,14 +21,16 @@ docker-compose up --build
 
 ## 🎯 For Frontend Developers
 
-Build a frontend application (NextJS, NuxtJS, etc.) that connects to this API to display games, reviews, companies, and genres.
+**👉 Add your frontend project to the `client/` folder.**
+
+Build a frontend application (Next.js, Nuxt, React, Vue, etc.) that connects to this API to display games, reviews, companies, and genres.
 
 **Available Data:**
-- 260+ games
-- 100 companies (developers/publishers)
-- 15 genres
-- 1200+ user reviews
-- 1000+ images
+- 520 games
+- 200 companies (developers/publishers)
+- 30 genres
+- 2400 user reviews
+- 1038 images
 
 **Documentation:**
 - REST API: Visit the [Swagger UI](http://localhost:8000/api-docs) for interactive documentation
@@ -41,18 +43,18 @@ Build a frontend application (NextJS, NuxtJS, etc.) that connects to this API to
 
 ## 🔌 Database Access (Optional)
 
-**Connection Details:**
-- Host: `localhost`
-- Port: `5432`
-- Database: `gamedb`
-- Username: `gamedb_user`
-- Password: `gamedb_pass`
+**Database Type:** SQLite
 
-**Compatible Tools:** TablePlus, pgAdmin, DBeaver, Postico, DataGrip
+**File Location:** `./server/data/gameapi.sqlite`
 
-## 🐳 Docker Commands
+**Compatible Tools:** DB Browser for SQLite, TablePlus, DBeaver, DataGrip
+
+## 🐳 Docker/Podman Commands
 
 ```bash
+# From the server/ directory
+# cd server
+
 # Run in background
 docker-compose up -d
 
@@ -134,37 +136,25 @@ GET /media/my-game-title?w=800&h=450
 GET /media/The%20Legend%20of%20Zelda?w=300&h=400
 ```
 
-**Usage in Frontend:**
-```html
-<!-- Use game title or ID as seed for consistent images -->
-<img src="http://localhost:8000/media/game-123?w=300&h=200" alt="Game cover" />
-
-<!-- Relative URL (recommended) -->
-<img src="/media/game-123?w=300&h=200" alt="Game cover" />
-```
-
-**Features:**
-- Deterministic: Same seed = same pattern (great for caching)
-- Fast: Generated on-the-fly, no storage needed
-- Cacheable: Returns `Cache-Control: immutable` headers
-- Variety: 5 pattern types (geometric, gradient, circles, stripes, mosaic)
-
 ### Project Structure
 
 ```
-game-db/
-├── src/
-│   ├── config/         # Database config
-│   ├── controllers/    # REST controllers
-│   ├── graphql/        # GraphQL schema
-│   ├── models/         # Sequelize models
-│   ├── routes/         # API routes
-│   ├── utils/          # Utilities (pattern generator)
-│   └── index.ts        # Entry point
-├── scripts/            # Seed generation
-├── seeders/            # Database seeders
-├── migrations/         # Migrations
-├── tests/              # Test suites
-├── public/             # GraphQL Playground
-└── docker-compose.yml  # Docker config
+game-api/
+├── client/             # 👉 Your frontend project goes here
+└── server/             # Backend API
+    ├── src/
+    │   ├── config/         # Database config
+    │   ├── controllers/    # REST controllers
+    │   ├── graphql/        # GraphQL schema
+    │   ├── models/         # Sequelize models
+    │   ├── routes/         # API routes
+    │   ├── utils/          # Utilities (pattern generator)
+    │   └── index.ts        # Entry point
+    ├── scripts/            # Seed generation
+    ├── seeders/            # Database seeders
+    ├── migrations/         # Migrations
+    ├── tests/              # Test suites
+    ├── public/             # GraphQL Playground
+    ├── data/               # SQLite database
+    └── docker-compose.yml  # Docker config
 ```

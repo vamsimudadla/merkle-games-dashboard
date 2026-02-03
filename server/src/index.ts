@@ -31,7 +31,7 @@ const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Game DB API',
+      title: 'Game API',
       version: '1.0.0',
       description: 'A comprehensive API for managing video game database',
     },
@@ -128,7 +128,7 @@ async function startServer(): Promise<void> {
     // Colorful startup messages
     console.log('');
     console.log(colorize.rainbow('🎮 ================================= 🎮'));
-    console.log(colorize.server('🚀 GAME DB SERVER STARTED SUCCESSFULLY! 🚀'));
+    console.log(colorize.server('🚀 GAME API SERVER STARTED SUCCESSFULLY! 🚀'));
     console.log(colorize.rainbow('🎮 ================================= 🎮'));
     console.log('');
 
@@ -145,12 +145,12 @@ async function startServer(): Promise<void> {
       `${colorize.success('✅ All systems operational!')}`
     ];
 
-    console.log(createBox(serverInfo, '🎮 GAME DATABASE API'));
+    console.log(createBox(serverInfo, '🎮 GAME API'));
     console.log('');
   } catch (error) {
     console.log('');
     console.log(colorize.error('❌ ================================== ❌'));
-    console.log(colorize.error('💥 FAILED TO START GAME DB SERVER! 💥'));
+    console.log(colorize.error('💥 FAILED TO START GAME API SERVER! 💥'));
     console.log(colorize.error('❌ ================================== ❌'));
     console.log('');
     console.error(colorize.error(`🚨 Error: ${(error as Error).message}`));

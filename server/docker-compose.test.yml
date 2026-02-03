@@ -5,11 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.postgres
-    container_name: gamedb-postgres-test
+    container_name: gameapi-postgres-test
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=gamedb_pass
-      - POSTGRES_DB=gamedb
+      - POSTGRES_PASSWORD=gameapi_pass
+      - POSTGRES_DB=gameapi
     ports:
       - "5433:5432"
     volumes:
@@ -24,14 +24,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: gamedb-app-test
+    container_name: gameapi-app-test
     environment:
       - NODE_ENV=test
       - DB_HOST=postgres
       - DB_PORT=5432
-      - DB_NAME=gamedb
+      - DB_NAME=gameapi
       - DB_USER=postgres
-      - DB_PASSWORD=gamedb_pass
+      - DB_PASSWORD=gameapi_pass
       - PORT=8000
       - JWT_SECRET=test-secret-key
       - API_VERSION=v1

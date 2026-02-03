@@ -1,4 +1,4 @@
-# Game DB - Entity Relationship Diagram
+# Game API - Entity Relationship Diagram
 
 ## Database Schema
 

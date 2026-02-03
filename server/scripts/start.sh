@@ -18,7 +18,7 @@ npx sequelize-cli db:migrate > /dev/null 2>&1
 
 # Step 2: Check database
 echo "[2/7] Checking database..."
-DB_PATH="${DB_STORAGE:-./data/gamedb.sqlite}"
+DB_PATH="${DB_STORAGE:-./data/gameapi.sqlite}"
 GENRE_COUNT=$(sqlite3 "$DB_PATH" "SELECT COUNT(*) FROM genres;" 2>/dev/null || echo "0")
 
 # Step 3: Seed database (if needed)
@@ -44,10 +44,9 @@ done
 echo "      Server ready"
 
 # Step 6: Running tests
-if [ "${NODE_ENV:-development}" = "development" ]; then
-    echo "[6/7] Running tests..."
-    sh scripts/test-sanity.sh > /tmp/test-output.log 2>&1
-    TEST_EXIT=$?
+echo "[6/7] Running tests..."
+sh scripts/test-sanity.sh > /tmp/test-output.log 2>&1
+TEST_EXIT=$?
 
     # Step 7: Finalizing
     echo "[7/7] Finalizing..."
@@ -59,7 +58,10 @@ if [ "${NODE_ENV:-development}" = "development" ]; then
         echo "═══════════════════════════════════════════════════════════════════"
         echo ""
         cat /tmp/test-output.log
-        kill $APP_PID
+        echo ""
+        echo "Server logs:"
+        cat /tmp/app.log
+        kill $APP_PID 2>/dev/null || true
         exit 1
     fi
 
@@ -137,7 +139,6 @@ if [ "${NODE_ENV:-development}" = "development" ]; then
         echo "═══════════════════════════════════════════════════════════════════"
         echo ""
     fi
-fi
 
 # Keep the application running
 wait $APP_PID

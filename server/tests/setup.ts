@@ -5,7 +5,7 @@
 if (process.env.USE_SEEDED_DB === 'true') {
   // Use development environment with seeded SQLite database for integration tests
   process.env.NODE_ENV = 'development';
-  process.env.DB_STORAGE = process.env.DB_STORAGE || './data/gamedb.sqlite';
+  process.env.DB_STORAGE = process.env.DB_STORAGE || './data/gameapi.sqlite';
 } else {
   // Use test environment with in-memory database for unit tests
   process.env.NODE_ENV = 'test';

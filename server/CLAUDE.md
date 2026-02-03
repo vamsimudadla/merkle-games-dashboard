@@ -1,14 +1,14 @@
-# Game DB
+# Game API
 
 ## Overview
 
-This document provides an overview of the Game DB, which is a structured database containing information about various video games. The database includes details such as game titles, genres, platforms, release dates, developers, publishers, and user ratings.
+This document provides an overview of the Game API, which is a structured database containing information about various video games. The database includes details such as game titles, genres, platforms, release dates, developers, publishers, and user ratings.
 Database contains fictional data for demonstration purposes. The project will seed a database with sample game data to illustrate its structure and functionality. Database will be containerized using Docker/Podman for the developers to easily have access to an API for their frontend exam or pair programming session.
 Project in its end state will provide a RESTful API and GraphQL endpoint to access the game data.
 
 ## Database Structure
 
-The Game DB is organized into several tables, each representing a different aspect of the games. The main tables include:
+The Game API is organized into several tables, each representing a different aspect of the games. The main tables include:
 1. **Games**: Contains basic information about each game.
    - ID (Primary Key)
    - Title
@@ -58,7 +58,7 @@ The Game DB is organized into several tables, each representing a different aspe
 	- Created Date
 
 ## Technologies Used
-The Game DB is built using the following technologies:
+The Game API is built using the following technologies:
 
 - Docker/Podman: Containerization for easy deployment and management
 - Database Management System: PostgreSQL
@@ -78,7 +78,7 @@ The database will be seeded with fictional game data to demonstrate its structur
 - Data will be in JSON, for easy manipulation and insertion into the database.
 
 ## API Endpoints
-The Game DB will provide the following API endpoints:
+The Game API will provide the following API endpoints:
 - `GET /games`: Retrieve a list of all games
 - `GET /games/:id`: Retrieve details of a specific game by ID
 - `GET /companies`: Retrieve a list of all companies

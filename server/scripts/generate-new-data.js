@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // Load existing games
-const gamesData = JSON.parse(fs.readFileSync("/Users/kasper.siggaard/Code/interview-projects/game-db/scripts/seed-data/games.json", "utf8"));
+const gamesData = JSON.parse(fs.readFileSync("/Users/kasper.siggaard/Code/interview-projects/game-api/scripts/seed-data/games.json", "utf8"));
 
 // Game title components
 const prefixes = ["Rise of", "Chronicles of", "Tales of", "Dark", "Neo", "Legend of", "Mystic", "Shadow", "Epic", "Final", "Eternal", "Cyber", "Star", "Iron", "Crystal", "Thunder", "Phantom", "Infinite", "Lost", "Sacred", "Ancient", "Burning", "Frozen", "Golden", "Silver"];
@@ -82,5 +82,5 @@ for (let i = 261; i <= 520; i++) {
 }
 
 gamesData.games = gamesData.games.concat(newGames);
-fs.writeFileSync("/Users/kasper.siggaard/Code/interview-projects/game-db/scripts/seed-data/games.json", JSON.stringify(gamesData, null, 2));
+fs.writeFileSync("/Users/kasper.siggaard/Code/interview-projects/game-api/scripts/seed-data/games.json", JSON.stringify(gamesData, null, 2));
 console.log("Added " + newGames.length + " new games. Total games: " + gamesData.games.length);

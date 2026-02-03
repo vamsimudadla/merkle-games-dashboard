@@ -10,7 +10,7 @@ interface DatabaseConfig {
 const databaseConfig: DatabaseConfig = {
   development: {
     dialect: 'sqlite',
-    storage: process.env.DB_STORAGE || './data/gamedb.sqlite',
+    storage: process.env.DB_STORAGE || './data/gameapi.sqlite',
     logging: false,
     dialectOptions: {
       // Enable Write-Ahead Logging for better concurrency
@@ -37,7 +37,7 @@ const databaseConfig: DatabaseConfig = {
   },
   production: {
     dialect: 'sqlite',
-    storage: process.env.DB_STORAGE || './data/gamedb.sqlite',
+    storage: process.env.DB_STORAGE || './data/gameapi.sqlite',
     logging: false,
     define: {
       timestamps: true,
