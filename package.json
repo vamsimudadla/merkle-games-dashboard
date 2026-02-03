@@ -1,7 +1,7 @@
 {
-  "name": "game-db",
+  "name": "merkle-games-api",
   "version": "1.0.0",
-  "description": "A comprehensive RESTful and GraphQL API for managing a video game database. The system includes game information, user reviews, company details, genres, and image management with polymorphic relationships.",
+  "description": "A comprehensive RESTful and GraphQL API with a mocked video game database. The system includes game information, user reviews, company details, genres, and image management with polymorphic relationships.",
   "main": "dist/src/index.js",
   "engines": {
     "node": ">=24.0.0",

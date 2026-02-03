@@ -46,7 +46,7 @@ interface GameUpdateRequest {
   publisher_id?: number;
 }
 
-describe('Game API Endpoints', () => {
+describe('Merkle Games API Endpoints', () => {
   let authToken: string;
   let testGame: GameResponse;
 

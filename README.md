@@ -1,4 +1,4 @@
-# 🎮 Game DB API
+# 🎮 Merkle Games API
 
 Backend API for frontend technical assignments.
 
