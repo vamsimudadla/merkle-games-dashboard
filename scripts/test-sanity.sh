@@ -3,10 +3,13 @@
 # Suppress test output by default, only show summary
 export JEST_SILENT_REPORTER_SHOW_WARNINGS=false
 
+# Get port from environment or use default
+PORT="${PORT:-8000}"
+
 # Function to check if server is responding
 check_server() {
     for i in 1 2 3; do
-        if curl -s http://localhost:8000/health > /dev/null 2>&1; then
+        if curl -s "http://localhost:${PORT}/health" > /dev/null 2>&1; then
             return 0
         fi
         sleep 2

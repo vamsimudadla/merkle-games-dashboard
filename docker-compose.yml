@@ -8,7 +8,7 @@ services:
     container_name: gamedb-app
     environment:
       - NODE_ENV=development
-      - PORT=8000
+      - PORT=${PORT:-8000}
       - DB_STORAGE=/app/data/gamedb.sqlite
       - JWT_SECRET=your-secret-key-here-change-in-production
       - API_VERSION=v1
@@ -16,13 +16,13 @@ services:
       - GRAPHQL_PATH=/graphql
       - GRAPHQL_PLAYGROUND=true
     ports:
-      - "8000:8000"
+      - "${PORT:-8000}:${PORT:-8000}"
     volumes:
       - ./src:/app/src
       - ./seeders:/app/seeders
       - ./data:/app/data
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      test: ["CMD", "sh", "-c", "curl -f http://localhost:$${PORT:-8000}/health"]
       interval: 30s
       timeout: 10s
       retries: 3

@@ -8,6 +8,7 @@ Backend API for frontend technical assignments.
 # Clone and start
 git clone git@github.com:merkle-ne-tools/frontend-interview-games-api.git game-db
 cd game-db
+cp env.example .env   # Optional: customize environment variables
 docker-compose up --build
 ```
 

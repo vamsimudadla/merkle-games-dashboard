@@ -23,8 +23,8 @@
   <script>
     new window.EmbeddedSandbox({
       target: '#embeddableExplorer',
-      // Pass through runtime configuration if available
-      initialEndpoint: 'http://localhost:8000/graphql',
+      // Use relative URL to work with any port
+      initialEndpoint: `${window.location.origin}/graphql`,
       includeCookies: true,
       // Enhanced configuration for better syntax highlighting
       theme: 'dark',

@@ -26,7 +26,7 @@ interface GraphQLResponse<T = any> {
 }
 
 describe('GraphQL API Integration Tests', () => {
-  const baseURL = 'http://localhost:8000';
+  const baseURL = `http://localhost:${process.env.PORT || 8000}`;
 
   beforeAll(async () => {
     // Wait for server to be ready
