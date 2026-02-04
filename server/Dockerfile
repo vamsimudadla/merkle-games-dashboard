@@ -1,6 +1,6 @@
 FROM node:24-alpine
 
-RUN apk add --no-cache netcat-openbsd curl sqlite
+RUN apk add --no-cache netcat-openbsd curl sqlite dos2unix
 
 WORKDIR /app
 
@@ -16,7 +16,8 @@ RUN mkdir -p /app/data
 # Build TypeScript
 RUN npm run build
 
-RUN chmod +x scripts/start.sh
+# Convert line endings and make scripts executable (for Windows compatibility)
+RUN dos2unix scripts/*.sh && chmod +x scripts/*.sh
 
 EXPOSE 8000
 
