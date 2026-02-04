@@ -33,8 +33,11 @@ fi
 
 # Step 4: Starting server
 echo "[4/7] Starting server..."
+# Use exec to properly redirect and detach for cross-platform consistency
+exec 3>&1 4>&2
 npm start > /tmp/app.log 2>&1 &
 APP_PID=$!
+exec 1>&3 2>&4 3>&- 4>&-
 
 # Step 5: Waiting for server
 echo "[5/7] Warming up server..."
