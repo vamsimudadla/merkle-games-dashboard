@@ -7,20 +7,22 @@ defineProps<{
 </script>
 
 <template>
-  <article class="review-item">
+  <article class="review-item" data-testid="review-item">
     <div class="review-header">
-      <div class="review-avatar">
+      <div class="review-avatar" data-testid="review-avatar">
         {{ review.user.username?.charAt(0).toUpperCase() }}
       </div>
       <div class="review-meta">
-        <span class="review-username">{{ review.user.username }}</span>
-        <div class="rating">
+        <span class="review-username" data-testid="review-username">{{
+          review.user.username
+        }}</span>
+        <div class="rating" data-testid="review-rating">
           <span class="review-star">★</span>
           <span class="review-text">{{ review.rating }}</span>
         </div>
       </div>
     </div>
-    <p class="review-text">
+    <p class="review-text" data-testid="review-text">
       {{ review.review_text }}
     </p>
   </article>
