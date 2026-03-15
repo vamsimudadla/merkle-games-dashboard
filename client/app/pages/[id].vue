@@ -40,14 +40,23 @@ const getCoverImage = () => {
 
 <template>
   <main class="detail-page">
-    <div v-if="error" class="status-message error">
+    <div
+      v-if="error"
+      class="status-message error"
+      role="alert"
+      aria-live="assertive"
+    >
       <p>Failed to load game. Please try again.</p>
     </div>
 
     <template v-else-if="game">
       <div class="back-wrapper">
-        <button class="back-btn" @click="goBack">
-          <span>←</span>
+        <button
+          class="back-btn"
+          @click="goBack"
+          aria-label="Go back to games list"
+        >
+          <span aria-hidden="true">←</span>
           Back
         </button>
       </div>
@@ -66,53 +75,69 @@ const getCoverImage = () => {
         <div class="detail-header">
           <h1 class="game-title">{{ game.title }}</h1>
 
-          <div class="badge-container">
+          <div class="badge-container" aria-label="Genre">
             <p class="genre-badge">{{ game.genre.name }}</p>
           </div>
 
-          <div class="game-stats">
-            <div class="game-rating">
+          <div class="game-stats" aria-label="Game details">
+            <div
+              class="game-rating"
+              :aria-label="`Rated ${calculateAverageRating(game.reviews)} out of 10 based on ${game.reviews?.length ?? 0} reviews`"
+            >
               <span class="stat-star" aria-hidden="true">★</span>
-              <span class="stat-value">{{
+              <span class="stat-value" aria-hidden="true">{{
                 calculateAverageRating(game.reviews)
               }}</span>
-              <span class="stat-label"
+              <span class="stat-label" aria-hidden="true"
                 >({{ game.reviews?.length ?? 0 }} reviews)</span
               >
             </div>
 
-            <div class="stat-divider" />
+            <div class="stat-divider" aria-hidden="true" />
 
             <div class="stat-info">
-              <span class="stat-label">Released</span>
-              <time class="stat-value" :datetime="game.release_date">
+              <span class="stat-label" id="release-label">Released</span>
+              <time
+                class="stat-value"
+                :datetime="game.release_date"
+                aria-labelledby="release-label"
+              >
                 {{ formatDate(game.release_date, "long") }}
               </time>
             </div>
 
-            <div class="stat-divider" />
+            <div class="stat-divider" aria-hidden="true" />
 
             <div class="stat-info">
-              <span class="stat-label">Developer</span>
-              <span class="stat-value">{{ game.developer.name }}</span>
+              <span class="stat-label" id="developer-label">Developer</span>
+              <span class="stat-value" aria-labelledby="developer-label">{{
+                game.developer.name
+              }}</span>
             </div>
           </div>
         </div>
 
-        <section class="detail-section">
-          <h2 class="section-title">Description</h2>
+        <section class="detail-section" aria-labelledby="description-heading">
+          <h2 class="section-title" id="description-heading">Description</h2>
           <p class="game-description">{{ game.description }}</p>
         </section>
 
-        <section class="detail-section">
-          <h2 class="section-title">
+        <section class="detail-section" aria-labelledby="reviews-heading">
+          <h2 class="section-title" id="reviews-heading">
             Reviews
-            <span class="reviews-count">
+            <span
+              class="reviews-count"
+              :aria-label="`${game.reviews?.length ?? 0} total reviews`"
+            >
               {{ game.reviews?.length ?? 0 }}
             </span>
           </h2>
 
-          <div v-if="game.reviews?.length" class="reviews-grid">
+          <div
+            v-if="game.reviews?.length"
+            class="reviews-grid"
+            :aria-label="`${game.reviews.length} reviews for ${game.title}`"
+          >
             <ReviewItem
               v-for="review in game.reviews"
               :key="review.id"

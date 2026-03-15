@@ -27,7 +27,14 @@ const coverImage = computed(() => {
 </script>
 
 <template>
-  <article class="game-card" @click="navigateToGameDetails">
+  <article
+    class="game-card"
+    @click="navigateToGameDetails"
+    role="button"
+    tabindex="0"
+    @keydown.enter="navigateToGameDetails"
+    :aria-label="`View details for ${game.title}`"
+  >
     <div class="game-image">
       <NuxtImg
         :src="coverImage"
@@ -37,7 +44,7 @@ const coverImage = computed(() => {
         loading="lazy"
         @error="onImageError"
       />
-      <span class="game-genre">{{ game.genre.name }}</span>
+      <span class="game-genre" aria-hidden="true">{{ game.genre.name }}</span>
     </div>
 
     <div class="game-body">
@@ -48,10 +55,17 @@ const coverImage = computed(() => {
           {{ formatDate(game.release_date) }}
         </time>
 
-        <div class="game-rating">
-          <span class="star-text">★</span>
-          <span class="rating">{{ game.average_rating }}</span>
-          <span class="reviews-count">({{ game.reviews?.length ?? 0 }})</span>
+        <div
+          class="game-rating"
+          :aria-label="`Rated ${game.average_rating} out of 10 based on ${game.reviews?.length ?? 0} reviews`"
+        >
+          <span class="star-text" aria-hidden="true">★</span>
+          <span class="rating" aria-hidden="true">{{
+            game.average_rating
+          }}</span>
+          <span class="reviews-count" aria-hidden="true"
+            >({{ game.reviews?.length ?? 0 }})</span
+          >
         </div>
       </div>
     </div>

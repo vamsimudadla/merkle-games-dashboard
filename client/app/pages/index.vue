@@ -13,11 +13,17 @@ await getGames();
     <div class="page-header">
       <h1 class="page-title">Explore Games</h1>
 
-      <div v-if="games.length" class="sort-actions">
+      <div
+        v-if="games.length"
+        class="sort-actions"
+        role="group"
+        aria-label="Sort games by"
+      >
         <button
           class="sort-btn"
           :class="{ active: sortOption === SORT_OPTION.RATING }"
           @click="applySort(SORT_OPTION.RATING)"
+          :aria-pressed="sortOption === SORT_OPTION.RATING"
         >
           Top Rated
         </button>
@@ -25,13 +31,19 @@ await getGames();
           class="sort-btn"
           :class="{ active: sortOption === SORT_OPTION.DATE }"
           @click="applySort(SORT_OPTION.DATE)"
+          :aria-pressed="sortOption === SORT_OPTION.DATE"
         >
           Latest
         </button>
       </div>
     </div>
 
-    <div v-if="error" class="status-message error">
+    <div
+      v-if="error"
+      class="status-message error"
+      role="alert"
+      aria-live="assertive"
+    >
       <p>{{ error }}</p>
     </div>
 
@@ -39,7 +51,11 @@ await getGames();
       <p>No games found.</p>
     </div>
 
-    <section v-else class="games-grid">
+    <section
+      v-else
+      class="games-grid"
+      aria-label="`Showing ${games.length} games`"
+    >
       <GameCard v-for="game in games" :key="game.id" :game="game" />
     </section>
   </main>
