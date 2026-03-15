@@ -137,7 +137,7 @@ State is shared globally across pages. This means navigating from the index page
 
 ### Data Fetching
 
-`useAsyncData` is used on both pages. It runs the fetch on the server (SSR), serializes the result into the HTML payload, and hydrates the client without re-fetching. This improves both performance and SEO.
+Fetched data on the server (SSR), serializes the result into the HTML payload, and hydrates the client without re-fetching. This improves both performance and SEO.
 
 ### Average Rating
 
@@ -155,7 +155,7 @@ All styles are written in scoped SCSS per component. A global `_variables.scss` 
 
 ## Accessibility
 
-The application targets **WCAG 2.2 AA** compliance. Key measures taken:
+Key measures taken:
 
 - Semantic HTML throughout (`<main>`, `<article>`, `<section>`, `<time>`)
 - All interactive elements have `aria-label` or `aria-labelledby`
@@ -163,7 +163,7 @@ The application targets **WCAG 2.2 AA** compliance. Key measures taken:
 - Keyboard navigation supported on all clickable cards via `tabindex="0"` and `@keydown.enter`
 - Focus states use `focus-visible` to avoid showing outlines on mouse click
 - Sort buttons use `aria-pressed` to communicate active state to screen readers
-- Loading and error states use `aria-live` and `role="alert"`
+- Error states use `aria-live` and `role="alert"`
 - Heading hierarchy is maintained: `h1` → `h2` with no skipped levels
 
 ---
@@ -184,10 +184,10 @@ npx vitest              # watch mode
 | Phase                         | Time       |
 | ----------------------------- | ---------- |
 | Project setup + configuration | 30 min     |
-| Design and Implementation     | 30 hr      |
 | API integration + composable  | 45 min     |
 | Index page + GameCard         | 45 min     |
 | Detail page + ReviewItem      | 45 min     |
 | Unit tests                    | 30 min     |
+| Accessibility                 | 30 min     |
 | Documentation                 | 30 min     |
 | **Total**                     | **~4 hrs** |
