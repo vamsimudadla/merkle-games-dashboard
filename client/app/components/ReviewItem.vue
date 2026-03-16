@@ -10,7 +10,7 @@ defineProps<{
   <article
     class="review-item"
     data-testid="review-item"
-    aria-label="`Review by ${review.user.username}`"
+    :aria-label="`Review by ${review.user.username}`"
   >
     <div class="review-header">
       <div class="review-avatar" data-testid="review-avatar" aria-hidden="true">

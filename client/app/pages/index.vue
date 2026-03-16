@@ -2,8 +2,7 @@
 import { useGames } from "~/composables/useGames";
 import { SORT_OPTION } from "~/types";
 
-const { games, error, sortOption, applySort } = useGames();
-const { getGames } = useGames();
+const { games, error, sortOption, applySort, getGames } = useGames();
 
 await getGames();
 </script>
@@ -54,7 +53,7 @@ await getGames();
     <section
       v-else
       class="games-grid"
-      aria-label="`Showing ${games.length} games`"
+      :aria-label="`Showing ${games.length} games`"
     >
       <GameCard v-for="game in games" :key="game.id" :game="game" />
     </section>
